@@ -1,3 +1,3 @@
 # MatthewDorner
 
-[My Portfolio Site](matthewdorner.github.io)
+[My Portfolio Site](http://matthewdorner.github.io)
