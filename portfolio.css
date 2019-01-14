@@ -1,11 +1,50 @@
 body {
   font-family: 'Times New Roman', Times, serif;
-  background-color: #faf8f5;
+  background-color: #fdfdfd;
 }
 
-.example {
-  padding: 2em;
-} 
+/* navbar */
+
+.navbar {
+  border-bottom: 4px solid silver;
+}
+
+.nav-link:hover {
+  color: white!important;
+}
+
+.fa-bars {
+  margin-top: 2px;
+}
+
+/* container */
+
+.carousel-inner {
+  height: 760px;
+}
+
+/* carousel */
+
+.carousel-control-prev,
+.carousel-control-next {
+  color: black;
+  bottom: 75%;
+  filter: invert(50%);
+}
+
+.carousel-inner .carousel-item {
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+/* example container and contents */
+
+.exampleImage {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 9px black;
+}
 
 .example p {
   margin-top: 15px;
@@ -17,47 +56,20 @@ body {
   font-style: italic;
 }
 
-.nav-link:hover {
-  padding-bottom: 5px;
-  color: white!important;
+.samples {
+  font-style: italic;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  color: black;
-  bottom: 100%;
-  filter: invert(50%);
-}
+/* media */
 
-.carousel-inner .carousel-item {
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
-}
+@media only screen and (min-width: 767px) {
 
-.carousel-item {
-  padding: 20px;
-  padding-top: 30px;
-}
-
-.exampleImage {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  box-shadow: 3px 3px 9px black;
-}
-
-.nav-item a:hover {
-  border-bottom: 3px solid white;
-}
-
-@media only screen and (min-width: 768px) {
   /* tablets and desktop */
+
   .carousel-item {
-    margin-top: 20px;
+    padding-top: 155px;
   }
-  .carousel {
-    margin-top: 105px;
-  }
+
   .carousel-control-prev,
   .carousel-control-next {
     font-size: 72px;
@@ -65,9 +77,10 @@ body {
   .example h2 {
     font-size: 34px;
   }
+
   .example p {
     font-size: 18px;
-    width: 80%;
+    width: 700px;
   }
   .exampleImage {
     width: 560px;
@@ -76,9 +89,11 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+
   /* phones */
-  .carousel {
-    margin-top: 95px;
+
+  .carousel-item {
+    padding-top: 140px;
   }
   .carousel-control-prev,
   .carousel-control-next {
@@ -92,7 +107,7 @@ body {
     width: 100%;
   }
   .exampleImage {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 }

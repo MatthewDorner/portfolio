@@ -6,14 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script></head>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="./portfolio.css">
+</head>
   <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top py-1">
-    <a class="navbar-brand" href="#">Matthew Dorner</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <span class="navbar-brand">Matthew Dorner</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+    aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fas fa-bars"></i></span></button>
+
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -31,7 +34,11 @@
       </ul>
     </div>
   </nav> 
+
+  <!-- Main Container -->
   <div class="container">
+
+    <!-- Carousel  -->
     <div id="examplesCarousel" class="carousel slide" data-wrap="false" data-interval="false">
       <a class="carousel-control-prev" href="#examplesCarousel" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
@@ -39,42 +46,73 @@
       <a class="carousel-control-next" href="#examplesCarousel" data-slide="next">
         <span class="carousel-control-next-icon"></span>
       </a>
+
+      <!-- Carousel Inner -->
       <div class="carousel-inner example">
         <div class="carousel-item active">
           <h2 class="exampleTitle">Benson Medical Instruments - Benson Cloud Services</h2>
-          <a href="http://www.bensonmedical.com/downloads/BensonCloud%20Services%2020180130.pdf"><img  class="exampleImage" src="./bensoncloudservices.jpg"/></a>
-          <p class="summary">Benson Cloud Services is a web application for storage and analysis of occupational health testing data. I was a developer on this project for 8 months and worked on the frontend, backend and SSRS reporting module. A PDF datasheet with features and more info is available <a href="http://www.bensonmedical.com/downloads/BensonCloud%20Services%2020180130.pdf">HERE</a>.</p>
-          <p class="technologies">Technologies: C#, ASP.NET MVC, JavaScript (Dojo Toolkit), SQL (SSRS), SVN</p>
+          <img  class="exampleImage" src="./bensoncloudservices.jpg"/>
+          <p class="summary">Benson Cloud Services is a web application for storage and analysis of occupational health testing data. I was a developer on this project for 8 months and worked on the frontend, backend and SSRS reporting module.</p>
+          <p class="technologies">Technologies: C#, ASP.NET MVC, JavaScript (Dojo Toolkit), SQL (SSRS), SVN
+            <br>
+            Links:
+            <a href="http://www.bensonmedical.com/downloads/BensonCloud%20Services%2020180130.pdf">Product Datasheet</a>
+          </p>
         </div>
         <div class="carousel-item">
           <h2 class="exampleTitle">Open Source - HospitalRun</h2>
           <img class="exampleImage" src="./hospitalrun.png"/>
-          <p class="summary">HospitalRun is a hospital management application in JavaScript using Ember, CouchDB and Electron. I am currently a maintainer for this project. Review my contributions at my <a href="https://www.github.com/MatthewDorner">GitHub profile</a>.</p>
-          <p class="technologies">Technologies: JavaScript, Node.js, CouchDB, Docker, Ember, Electron</p>
+          <p class="summary">HospitalRun is a hospital management application in JavaScript using Ember, CouchDB and Electron. I have made several contributions and am currently a maintainer for this project.</p>
+          <p class="technologies">Technologies: JavaScript, Node.js, CouchDB, Docker, Ember, Electron
+            <br>
+            Links: 
+            <a href="https://github.com/HospitalRun/hospitalrun-frontend/pull/1526">Ember bugfix</a> | 
+            <a href="https://github.com/HospitalRun/hospitalrun-server/pull/111">Docker config fix</a> | 
+            <a href="https://github.com/HospitalRun/hospitalrun-frontend/pull/1466">Reviewing a PR</a> |
+            <a href="https://github.com/HospitalRun/hospitalrun-frontend/pull/1424">Migrating to a new dependency</a>
+          </p>
         </div>
         <div class="carousel-item">
           <h2 class="exampleTitle">Personal Project - Grateful Dead Music Player</h2>
           <img class="exampleImage" src="./gratefuldead.png"/>
-          <p class="summary">I created this project to help myself learn React. It uses a public API to allow users to search and play music from archive.org's collection of public-domain Grateful Dead recordings. It also uses MongoDB to allow users to make an account and save certain recordings as favorites. More info, code and demo site instructions are at the <a href="https://github.com/MatthewDorner/archive-music-player">GitHub project page</a>.
-          <p class="technologies">Technologies: JavaScript, React, Express, Node, MongoDB, Passport</p>
+          <p class="summary">I created this project to help myself learn React. It uses a public API to allow users to search and play music from archive.org's collection of public-domain Grateful Dead recordings. It also uses MongoDB to allow users to make an account and save certain recordings as favorites.
+          <p class="technologies">Technologies: JavaScript, React, Express, Node, MongoDB, Passport
+            <br>
+            Links: 
+            <a href="https://github.com/MatthewDorner/archive-music-player/blob/master/client/components/Results.js">React component</a> | 
+            <a href="https://github.com/MatthewDorner/archive-music-player/blob/master/server/routes/routes.js">Express routes</a> | 
+            <a href="https://74.208.242.69">App demo site</a>
+          </p>
         </div>
         <div class="carousel-item">
           <h2 class="exampleTitle">Certification - FreeCodeCamp Front End Development</h2>
           <img class="exampleImage" src="./certificate.png"/>
-          <p class="summary">The certification required me to complete of dozens of programming exercises. View my certification <a href="https://www.freecodecamp.org/certification/matthewdorner/legacy-front-end">HERE</a>.</p>
-          <p class="technologies">Technologies: JavaScript, JQuery, Bootstrap, HTML, CSS, AJAX</p>
+          <p class="summary">The certification required me to complete of dozens of programming exercises.</p>
+          <p class="technologies">Technologies: JavaScript, JQuery, Bootstrap, HTML, CSS, AJAX
+            <br>
+            Links: 
+            <a href="https://www.freecodecamp.org/certification/matthewdorner/legacy-front-end">Certification</a>
+          </p>
         </div>
         <div class="carousel-item">
           <h2 class="exampleTitle">Personal Project - Simon game</h2>
           <img class="exampleImage" src="./simon.png"/>
-          <p class="summary">This "Simon" game in JavaScript was an exercise I did for the FreeCodeCamp Front End Developer course. Play it and view the CodePen <a href="https://codepen.io/MatthewDorner/pen/bMvJzy">HERE</a>.</p>
-          <p class="technologies">Technologies: JavaScript, CSS, Bootstrap, JQuery, HTML.</p>
+          <p class="summary">This "Simon" game in JavaScript was an exercise I did for the FreeCodeCamp Front End Developer course.</p>
+          <p class="technologies">Technologies: JavaScript, CSS, Bootstrap, JQuery, HTML.
+            <br>
+            Links:
+            <a href="https://codepen.io/MatthewDorner/pen/bMvJzy">CodePen</a>
+          </p>
         </div>
         <div class="carousel-item">
           <h2 class="exampleTitle">Personal Project - Tic Tac Toe game</h2>
           <img class="exampleImage" src="./tictactoe.png"/>
-          <p class="summary">This "Tic Tac Toe" game in JavaScript was an exercise I did for the FreeCodeCamp Front End Developer course. Play it and view the CodePen <a href="https://codepen.io/MatthewDorner/pen/ELoyKa">HERE</a>.</p>
-          <p class="technologies">Technologies: JavaScript, CSS, Bootstrap, JQuery, HTML.</p>
+          <p class="summary">This "Tic Tac Toe" game in JavaScript was an exercise I did for the FreeCodeCamp Front End Developer course.</p>
+          <p class="technologies">Technologies: JavaScript, CSS, Bootstrap, JQuery, HTML.
+            <br>
+            Links:
+            <a href="https://codepen.io/MatthewDorner/pen/ELoyKa">CodePen</a>
+          </p>
         </div>
       </div>
     </div>
