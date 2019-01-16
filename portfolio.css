@@ -14,6 +14,21 @@ body {
   overflow-x: hidden;
 }
 
+.portrait {
+  position: absolute;
+  left: 170px;
+  top: 9px;
+  width: 30px;
+  height: auto;
+  border-radius: 10%;
+  display: inline-block;
+  transition: width .5s;
+}
+
+.portrait:hover {
+  width: 130px;
+}
+
 /* navbar */
 
 .navbar {
