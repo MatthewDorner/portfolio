@@ -1,6 +1,17 @@
 body {
   font-family: 'Times New Roman', Times, serif;
-  background-color: #fdfdfd;
+  /* background-color: #fdfdfd; */
+
+/* Background pattern from Toptal Subtle Patterns */
+  background: url(background.png);
+  background-repeat: repeat;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh; 
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /* navbar */
@@ -17,28 +28,44 @@ body {
   margin-top: 2px;
 }
 
-/* container */
+/* carousel */
 
 .carousel-inner {
   height: 760px;
 }
 
-/* carousel */
-
 .carousel-control-prev,
 .carousel-control-next {
   color: black;
-  bottom: 75%;
+  bottom: 78%;
   filter: invert(50%);
 }
 
 .carousel-inner .carousel-item {
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform 1s ease;
+
+  -webkit-transition-delay: .5s;
+  transition-delay: .5s;
 }
 
-/* example container and contents */
+.carousel-item {
+    margin-top: 115px;
+}
+
+.item-background {
+  z-index: -1;
+  opacity: .7;
+  background-color: white;
+  position: absolute;
+  left: -10%;
+  top: -35%;
+  width: 120%;
+  height: 140%;
+}
+
+/* slide / example contents */
 
 .exampleImage {
   margin-top: 10px;
@@ -46,41 +73,52 @@ body {
   box-shadow: 3px 3px 9px black;
 }
 
-.example p {
-  margin-top: 15px;
-  color:#666;
+.carousel-item div p {
+  color: #666;
   line-height: 1.5;
+}
+
+.summary {
+  margin-top: 15px;
 }
 
 .technologies {
   font-style: italic;
+  margin-top: 15px;
 }
 
 .samples {
   font-style: italic;
 }
 
-/* media */
+@media only screen and (min-width: 1200px) {
+  /* large screen desktops */
 
-@media only screen and (min-width: 767px) {
-
-  /* tablets and desktop */
-
-  .carousel-item {
-    padding-top: 155px;
+  .carousel-inner {
+    margin-top: 100px;
   }
 
   .carousel-control-prev,
   .carousel-control-next {
-    font-size: 72px;
+    bottom: 91%;
   }
-  .example h2 {
+}
+
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
+
+  .carousel-inner {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .carousel-item h2 {
     font-size: 34px;
   }
 
-  .example p {
+  .carousel-item div p {
     font-size: 18px;
-    width: 700px;
+    width: 100%;
   }
   .exampleImage {
     width: 560px;
@@ -89,25 +127,37 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-
   /* phones */
 
-  .carousel-item {
-    padding-top: 140px;
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
-    font-size: 48px;
-  }
-  .example h2 {
+  .carousel-item h2 {
     font-size: 24px;
   }
-  .example p {
-    font-size: 14px;    
+
+  .carousel-item div p {
+    font-size: 14px;
     width: 100%;
   }
+
   .exampleImage {
-    width: 80%;
+    width: 95%;
     height: auto;
   }
 }
+
+/* reset overflows */
+
+/* .container {
+  overflow: visible;
+}
+
+.carousel {
+  overflow: visible;
+} */
+
+.carousel-inner {
+  overflow: visible;
+}
+
+.carousel-item {
+  overflow: visible;
+} 
