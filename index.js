@@ -38,7 +38,7 @@ $myCarousel.on('slide.bs.carousel', function (e) {
     }
   });
 
-  // after 1 second, hide everything except the incoming text
+  // after 500ms, hide everything except the incoming text
   setTimeout(function() {
     $('.carousel-item-text').each(function(index) {
       if (index == e.to) {
@@ -60,7 +60,7 @@ $myCarousel.on('slide.bs.carousel', function (e) {
   //   });
   // }, 500);
 
-  // after 1 second, show the incoming title
+  // after 500ms show the incoming title
   setTimeout(function() {
     $('.exampleTitle').each(function(index) {
       if (index == e.to) {
@@ -74,11 +74,11 @@ $myCarousel.on('slide.bs.carousel', function (e) {
   // move summary horizontally
   $('.summary').each(function() {
     $(this).transition({
-      marginLeft: (e.from > e.to) ? "+=2000" : "-=2000"
-    },700, function() {
+      marginLeft: (e.from > e.to) ? "+=3000" : "-=3000"
+    }, 600, function() {
       // then make (new) summary go back
       $(this).transition({
-        marginLeft: (e.from > e.to) ? "-=2000" : "+=2000"
+        marginLeft: (e.from > e.to) ? "-=3000" : "+=3000"
       }, 700, function() {
         // finished
       });
