@@ -9,7 +9,6 @@ body {
 
 .wrapper {
   width: 100%;
-  height: 180vh;
   overflow-y: hidden;
   overflow-x: hidden;
 }
@@ -20,13 +19,67 @@ body {
   top: 9px;
   width: 30px;
   height: auto;
-  border-radius: 10%;
+  border-radius: 5%;
   display: inline-block;
   transition: width .5s;
 }
 
 .portrait:hover {
   width: 130px;
+}
+
+.modal-content {
+  font-size: 18px;
+  background-color: #f9f9f9;
+  /* color: #1b1e21; */
+  color: #5a5a5a;
+  border: 0px;
+  /* border-radius: 0px; */
+  padding-top: 2.5%;
+}
+
+.modal-content p {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.modal-content p.quote {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.modal-body {
+  padding-bottom: 1%;
+}
+
+.modal-footer {
+  /* padding-left: 5%;
+  padding-right: 5%; */
+  border-top: 0px;
+  border-bottom: 4px solid silver;
+  padding-top: 0px;
+  padding-bottom: 3%;
+  /* border-radius: 0px; */
+}
+
+.modal-button {
+  /* border: 2px solid silver; */
+  border-radius: 4px;
+  color: #5a5a5a;
+  /* padding: 2px 5px 2px 5px; */
+  background-color: #f1f1f1;
+  /* display: block;
+  float: left; */
+  margin-right: 5%;
+}
+
+.btn:active,
+.btn:focus,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 /* navbar */
@@ -106,25 +159,12 @@ body {
   font-style: italic;
 }
 
-@media only screen and (min-width: 1440px) {
-  /* x-large screen desktops */
-
-  .wrapper {
-	height: 100vh;
-  }
-  
-  .carousel-inner {
-    margin-top: 100px;
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    bottom: 91%;
-  }
-}
-
 @media only screen and (min-width: 768px) {
   /* tablets and desktop */
+
+  .wrapper {
+    height: 150vh;
+  }
 
   .carousel-inner {
     padding-left: 5%;
@@ -145,8 +185,29 @@ body {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  /* x-large screen desktops */
+
+  .wrapper {
+  	height: 100vh;
+  }
+
+  .carousel-inner {
+    margin-top: 100px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    bottom: 91%;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   /* phones */
+
+  .wrapper {
+    height: 700px;
+  }
 
   .carousel-item h2 {
     font-size: 24px;
@@ -158,7 +219,7 @@ body {
   }
 
   .exampleImage {
-    width: 95%;
+    width: 100%;
     height: auto;
   }
 }

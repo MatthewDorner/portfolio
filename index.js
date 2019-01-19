@@ -48,7 +48,7 @@ $myCarousel.on('slide.bs.carousel', function (e) {
       }
     });
   }, 500);
-  
+
   // // after 1 second, show the incoming image
   // setTimeout(function() {
   //   $('.exampleImage').each(function(index) {
@@ -113,3 +113,10 @@ $myCarousel.on('slide.bs.carousel', function (e) {
     });
   }, 700)
 });
+
+// create the modal dialog
+$('#aboutModal').modal();
+
+let showModal = function() {
+  $('#aboutModal').modal();
+}

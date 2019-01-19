@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Matthew Dorner - Developer Portfolio</title>
   <meta charset="utf-8">
@@ -12,16 +12,31 @@
   <link rel="stylesheet" href="./portfolio.css">
 </head>
   <body>
+    <div class="modal fade" id="aboutModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>Hello,</p>
+            <p>I am Matthew Dorner and this is my web development portfolio. Use the left and right arrows to view projects and code samples.</p>
+            <hr />
+          </div>
+          <div class="modal-footer">
+            <p class="quote">More so than any particular technology, I aim to be an expert at the application of problem solving and correct communication to any technically complex task.</p>
+            <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   <div class="wrapper">
   <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top py-1">
     <span class="navbar-brand">Matthew Dorner</span>
-    <img class="portrait" src="portrait.jpg" />
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
     aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
         class="fas fa-bars"></i></span></button>
-
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" onClick="showModal()" href="#">About</a>
         <li class="nav-item">
           <a class="nav-link" href="MatthewDornerResume_1-4-19.pdf">Resume</a>
         </li>
@@ -37,10 +52,8 @@
       </ul>
     </div>
   </nav>
-
   <!-- Main Container -->
   <div class="container">
-
     <!-- Carousel  -->
     <div id="examplesCarousel" class="carousel slide" data-wrap="false" data-interval="false">
       <a class="carousel-control-prev" href="#examplesCarousel" data-slide="prev">
@@ -49,14 +62,12 @@
       <a class="carousel-control-next" href="#examplesCarousel" data-slide="next">
         <span class="carousel-control-next-icon"></span>
       </a>
-
       <!-- Carousel Inner -->
       <div class="carousel-inner anim">
-
         <div class="carousel-item active">
           <div class="item-background"></div>
           <h2 class="exampleTitle">Benson Medical Instruments - Benson Cloud Services</h2>
-          <img  class="exampleImage" src="./bensoncloudservices.jpg"/>
+          <img class="exampleImage" src="./bensoncloudservices.jpg" alt="Benson Cloud Services screenshot"/>
           <div class="carousel-item-text">
             <p class="summary">Benson Cloud Services is a web application for storage and analysis of occupational health testing data. I was a developer on this project for 8 months and worked on the frontend, backend and SSRS reporting module.</p>
             <p class="technologies">
@@ -67,11 +78,10 @@
             </p>
           </div>
         </div>
-
         <div class="carousel-item">
           <div class="item-background"></div>
           <h2 class="exampleTitle">Open Source - HospitalRun</h2>
-          <img class="exampleImage" src="./hospitalrun.png"/>
+          <img class="exampleImage" src="./hospitalrun.png" alt="HospitalRun screenshot"/>
           <div class="carousel-item-text">
             <p class="summary">HospitalRun is a hospital management application in JavaScript using Ember, CouchDB and Electron. I have made several contributions and am currently a maintainer for this project.</p>
             <p class="technologies">
@@ -85,11 +95,10 @@
             </p>
           </div>
         </div>
-
         <div class="carousel-item">
           <div class="item-background"></div>
           <h2 class="exampleTitle">Personal Project - Grateful Dead Music Player</h2>
-          <img class="exampleImage" src="./gratefuldead.png"/>
+          <img class="exampleImage" src="./gratefuldead.png" alt="Grateful Dead Music Player screenshot"/>
           <div class="carousel-item-text">
             <p class="summary">I created this project to help myself learn React. It uses a public API to allow users to search and play music from archive.org's collection of public-domain Grateful Dead recordings. It also uses MongoDB to allow users to make an account and save certain recordings as favorites.</p>
             <p class="technologies">
@@ -105,7 +114,7 @@
         <div class="carousel-item">
           <div class="item-background"></div>
           <h2 class="exampleTitle">Certification - FreeCodeCamp Front End Development</h2>
-          <img class="exampleImage" src="./certificate.png"/>
+          <img class="exampleImage" src="./certificate.png" alt="FreeCodeCamp Certification image"/>
           <div class="carousel-item-text">
             <p class="summary">The certification required me to complete of dozens of programming exercises.</p>
             <p class="technologies">
@@ -119,7 +128,7 @@
         <div class="carousel-item">
           <div class="item-background"></div>
           <h2 class="exampleTitle">Personal Project - Simon game</h2>
-          <img class="exampleImage" src="./simon.png"/>
+          <img class="exampleImage" src="./simon.png" alt="Simon game screenshot"/>
           <div class="carousel-item-text">
             <p class="summary">This "Simon" game in JavaScript was an exercise I did for the FreeCodeCamp Front End Developer course.</p>
             <p class="technologies">
@@ -133,7 +142,7 @@
         <div class="carousel-item">
           <div class="item-background"></div>
           <h2 class="exampleTitle">Personal Project - Tic Tac Toe game</h2>
-          <img class="exampleImage" src="./tictactoe.png"/>
+          <img class="exampleImage" src="./tictactoe.png" alt="Tic Tac Toe game screenshot"/>
           <div class="carousel-item-text">
             <p class="summary">This "Tic Tac Toe" game in JavaScript was an exercise I did for the FreeCodeCamp Front End Developer course.</p>
             <p class="technologies">
