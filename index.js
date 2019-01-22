@@ -39,6 +39,13 @@ $myCarousel.on('slide.bs.carousel', function (e) {
     });
   }, 500);
 
+
+  // there's a bug with this where if you move the carousel and then move it again in the opposite direction before
+  // the movement is complete, you can get stuck with some small amount of extra margin on the text, it's some problem
+  // with the code below.
+ 
+  // maybe it can be fixed by just making the margins go back to zero instead of these "+- a certain number"
+  
   // move summary text horizontally
   $('.summary').each(function() {
     $(this).transition({
