@@ -223,8 +223,10 @@ although there's probably a better way */
   }
 }
 
-/* to force vertical scroll on short screens, since overflow-y had to be turned off for .wrapper. */
-@media only screen and (max-height: 899px) {
+/* to force vertical scroll on short screens (smaller than 1440x900), since overflow-y had to be turned off for .wrapper. 
+but... not if the window is very small horizontally, since that'll make the content itself scale down so it won't
+need to scroll. */
+@media only screen and (max-height: 899px) and (min-width: 576px) {
   .wrapper {
   	height: 140vh;
   }
