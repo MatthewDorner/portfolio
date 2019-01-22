@@ -5,7 +5,7 @@ $myCarousel.on('slide.bs.carousel', function (e) {
   let incomingImage = $('.example-image')[e.to];
   let outgoingImage = $('.example-image')[e.from];
   let incomingCarouselItem = $('.carousel-item')[e.to];
-  let outgoingBackground = $('.item-background')[e.from];  
+  let outgoingBackground = $('.item-background')[e.from];
 
   /* TRANSPARENT BACKGROUND */
 
@@ -18,7 +18,7 @@ $myCarousel.on('slide.bs.carousel', function (e) {
   }, 1500);
 
   /* EXPLODING TEXT */
-      
+
   // hide all text except the outgoing text
   $('.carousel-item-text').each(function(index) {
     if (index == e.from) {
@@ -43,9 +43,9 @@ $myCarousel.on('slide.bs.carousel', function (e) {
   // there's a bug with this where if you move the carousel and then move it again in the opposite direction before
   // the movement is complete, you can get stuck with some small amount of extra margin on the text, it's some problem
   // with the code below.
- 
+
   // maybe it can be fixed by just making the margins go back to zero instead of these "+- a certain number"
-  
+
   // move summary text horizontally
   $('.summary').each(function() {
     $(this).transition({
@@ -75,29 +75,28 @@ $myCarousel.on('slide.bs.carousel', function (e) {
   });
 
   /* FADING IMAGE AND TITLE */
-  
+
   // fade in incoming title and image
-  // these won't work unless I do a 1ms timeout... otherwise the carousel slide animation won't work
-  //setTimeout(function() {
-  //  $(incomingTitle).css('opacity', '0');
-  //  $(incomingTitle).transition({
-  //    opacity: '1'
-  //  },1500);
-  //}, 1);
+  // these won't work unless I do a timeout... otherwise the carousel slide animation doesn't work
+  setTimeout(function() {
+   $(incomingTitle).css('opacity', '0');
+   $(incomingTitle).transition({
+     opacity: '1'
+   },1800);
+ }, 300);
 
-  // not this one, it kind of looks good to have the image appear immediately.
-  // setTimeout(function() {
-  //   $(incomingImage).css('opacity', '0');
-  //   $(incomingImage).transition({
-  //     opacity: '1'
-  //   },600);
-  // }, 1);
+  setTimeout(function() {
+    $(incomingImage).css('opacity', '0');
+    $(incomingImage).transition({
+      opacity: '1'
+    },1800);
+  }, 300);
 
-  // because I have to do a 1ms timeout above, I have to hide the entire slide or it'll flash
-  //$(incomingCarouselItem).css('opacity', '0');
-  //setTimeout(() => {
-  //  $(incomingCarouselItem).css('opacity', '1');
-  //}, 100);
+  // because I have to do a timeout above, I have to hide the entire slide during this time or it'll flash
+  $(incomingCarouselItem).css('opacity', '0');
+  setTimeout(() => {
+   $(incomingCarouselItem).css('opacity', '1');
+ }, 310);
 
   // fade out outgoing image
   setTimeout(function() {
