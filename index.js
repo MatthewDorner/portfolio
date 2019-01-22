@@ -71,12 +71,12 @@ $myCarousel.on('slide.bs.carousel', function (e) {
   
   // fade in incoming title and image
   // these won't work unless I do a 1ms timeout... otherwise the carousel slide animation won't work
-  setTimeout(function() {
-    $(incomingTitle).css('opacity', '0');
-    $(incomingTitle).transition({
-      opacity: '1'
-    },1500);
-  }, 1);
+  //setTimeout(function() {
+  //  $(incomingTitle).css('opacity', '0');
+  //  $(incomingTitle).transition({
+  //    opacity: '1'
+  //  },1500);
+  //}, 1);
 
   // not this one, it kind of looks good to have the image appear immediately.
   // setTimeout(function() {
@@ -87,10 +87,10 @@ $myCarousel.on('slide.bs.carousel', function (e) {
   // }, 1);
 
   // because I have to do a 1ms timeout above, I have to hide the entire slide or it'll flash
-  $(incomingCarouselItem).css('opacity', '0');
-  setTimeout(() => {
-    $(incomingCarouselItem).css('opacity', '1');
-  }, 100);
+  //$(incomingCarouselItem).css('opacity', '0');
+  //setTimeout(() => {
+  //  $(incomingCarouselItem).css('opacity', '1');
+  //}, 100);
 
   // fade out outgoing image
   setTimeout(function() {
