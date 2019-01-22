@@ -1,16 +1,24 @@
 var $myCarousel = $('#examplesCarousel');
 
 $myCarousel.on('slide.bs.carousel', function (e) {
+  let incomingTitle = $('.example-title')[e.to];
+  let incomingImage = $('.example-image')[e.to];
+  let outgoingImage = $('.example-image')[e.from];
+  let incomingCarouselItem = $('.carousel-item')[e.to];
+  let outgoingBackground = $('.item-background')[e.from];  
+
+  /* TRANSPARENT BACKGROUND */
 
   // hide the current background to prevent overlapping transparent space
-  $('.item-background').each(function(index) {
-    if (index == e.from) {
-      $(this).css('opacity', '0');
-    } else {
-      $(this).css('opacity', '.7');
-    }
-  });
+  $(outgoingBackground).css('opacity', '0');
 
+  // then put it back once it's off screen
+  setTimeout(() => {
+      $(outgoingBackground).css('opacity', '.7');
+  }, 1500);
+
+  /* EXPLODING TEXT */
+      
   // hide all text except the outgoing text
   $('.carousel-item-text').each(function(index) {
     if (index == e.from) {
@@ -20,25 +28,7 @@ $myCarousel.on('slide.bs.carousel', function (e) {
     }
   });
 
-  // // hide the incoming image
-  // $('.exampleImage').each(function(index) {
-  //   if (index == e.to) {
-  //     $(this).css('opacity', '0');
-  //   } else {
-  //     $(this).css('opacity', '1');
-  //   }
-  // });
-
-  // hide the incoming title
-  $('.exampleTitle').each(function(index) {
-    if (index == e.to) {
-      $(this).css('opacity', '0');
-    } else {
-      $(this).css('opacity', '1');
-    }
-  });
-
-  // after 500ms, hide everything except the incoming text
+  // after 500ms, hide all text except the incoming text
   setTimeout(function() {
     $('.carousel-item-text').each(function(index) {
       if (index == e.to) {
@@ -49,29 +39,7 @@ $myCarousel.on('slide.bs.carousel', function (e) {
     });
   }, 500);
 
-  // // after 1 second, show the incoming image
-  // setTimeout(function() {
-  //   $('.exampleImage').each(function(index) {
-  //     if (index == e.to) {
-  //       $(this).css('opacity', '1');
-  //     } else {
-  //       // $(this).css('opacity', '0');
-  //     }
-  //   });
-  // }, 500);
-
-  // after 500ms show the incoming title
-  setTimeout(function() {
-    $('.exampleTitle').each(function(index) {
-      if (index == e.to) {
-        $(this).css('opacity', '1');
-      } else {
-        // $(this).css('opacity', '0');
-      }
-    });
-  }, 500);
-
-  // move summary horizontally
+  // move summary text horizontally
   $('.summary').each(function() {
     $(this).transition({
       marginLeft: (e.from > e.to) ? "+=3000" : "-=3000"
@@ -99,19 +67,40 @@ $myCarousel.on('slide.bs.carousel', function (e) {
     });
   });
 
+  /* FADING IMAGE AND TITLE */
+  
+  // fade in incoming title and image
+  // these won't work unless I do a 1ms timeout... otherwise the carousel slide animation won't work
+  setTimeout(function() {
+    $(incomingTitle).css('opacity', '0');
+    $(incomingTitle).transition({
+      opacity: '1'
+    },1500);
+  }, 1);
+
+  // not this one, it kind of looks good to have the image appear immediately.
+  // setTimeout(function() {
+  //   $(incomingImage).css('opacity', '0');
+  //   $(incomingImage).transition({
+  //     opacity: '1'
+  //   },600);
+  // }, 1);
+
+  // because I have to do a 1ms timeout above, I have to hide the entire slide or it'll flash
+  $(incomingCarouselItem).css('opacity', '0');
+  setTimeout(() => {
+    $(incomingCarouselItem).css('opacity', '1');
+  }, 100);
+
   // fade out outgoing image
   setTimeout(function() {
-    $('.exampleImage').each(function(index) {
-      if (index == e.from) {
-        $(this).transition({
-          opacity: "0"
-        },500, function() {
-          // then restore opacity
-          $(this).css('opacity', '1');
-        });
-      }
+    $(outgoingImage).transition({
+      opacity: "0"
+    },500, function() {
+      // then restore opacity
+      $(outgoingImage).css('opacity', '1');
     });
-  }, 700)
+  }, 700);
 });
 
 // create the modal dialog
