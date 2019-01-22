@@ -82,21 +82,21 @@ $myCarousel.on('slide.bs.carousel', function (e) {
    $(incomingTitle).css('opacity', '0');
    $(incomingTitle).transition({
      opacity: '1'
-   },1800);
- }, 300);
+   },1600);
+ }, 400);
 
   setTimeout(function() {
     $(incomingImage).css('opacity', '0');
     $(incomingImage).transition({
       opacity: '1'
-    },1800);
-  }, 300);
+    },1600);
+  }, 400);
 
   // because I have to do a timeout above, I have to hide the entire slide during this time or it'll flash
   $(incomingCarouselItem).css('opacity', '0');
   setTimeout(() => {
    $(incomingCarouselItem).css('opacity', '1');
- }, 310);
+ }, 410);
 
   // fade out outgoing image
   setTimeout(function() {
