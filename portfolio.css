@@ -2,7 +2,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
   /* background-color: #fdfdfd; */
 
-/* Background pattern from Toptal Subtle Patterns */
+  /* Background pattern from Toptal Subtle Patterns */
   background: url(background.png);
   background-repeat: repeat;
 }
@@ -15,7 +15,6 @@ although there's probably a better way */
   overflow-y: hidden;
   overflow-x: hidden;
 }
-
 
 /* modal */
 
@@ -127,7 +126,7 @@ although there's probably a better way */
 
 /* carousel item / work example contents */
 
-.exampleImage {
+.example-image {
   margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: 3px 3px 9px black;
@@ -167,7 +166,7 @@ although there's probably a better way */
     width: 100%;
   }
 
-  .exampleImage {
+  .example-image {
     width: 100%;
     height: auto;
   }
@@ -189,7 +188,7 @@ although there's probably a better way */
     font-size: 18px;
     width: 100%;
   }
-  .exampleImage {
+  .example-image {
     width: 560px;
     height: auto;
   }
@@ -217,7 +216,7 @@ although there's probably a better way */
     font-size: 18px;
     width: 100%;
   }
-  .exampleImage {
+  .example-image {
     width: 560px;
     height: auto;
   }
