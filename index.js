@@ -1,6 +1,6 @@
-var $myCarousel = $('#examplesCarousel');
+var carousel = $('#examples-carousel');
 
-$myCarousel.on('slide.bs.carousel', function (e) {
+carousel.on('slide.bs.carousel', function (e) {
   let incomingTitle = $('.example-title')[e.to];
   let incomingImage = $('.example-image')[e.to];
   let outgoingImage = $('.example-image')[e.from];
@@ -38,7 +38,6 @@ $myCarousel.on('slide.bs.carousel', function (e) {
       }
     });
   }, 500);
-
 
   // there's a bug with this where if you move the carousel and then move it again in the opposite direction before
   // the movement is complete, you can get stuck with some small amount of extra margin on the text, it's some problem
@@ -109,9 +108,16 @@ $myCarousel.on('slide.bs.carousel', function (e) {
   }, 700);
 });
 
-// create the modal dialog
-$('#aboutModal').modal();
+/* MODAL */
 
 let showModal = function() {
-  $('#aboutModal').modal();
+  $('#about-modal').modal();
+
+  // this also only works with a timeout?
+  setTimeout(() => {
+    $('#modal-close-button').focus();
+  }, 50);
 }
+
+// show on page load
+showModal();
