@@ -22,7 +22,8 @@
           </div>
           <div class="modal-footer">
             <p class="quote">More so than any particular technology, I aim to be an expert at the application of problem solving and correct communication to any technically complex task.</p>
-            <button type="button" class="btn btn-default modal-button" id="modal-close-button" data-dismiss="modal">Close</button>
+            <!-- need autofocus attribute on this button or it won't work in Chrome, but without the Javascript that does the same thing, it won't work in Firefox -->
+            <button type="button" class="btn btn-default modal-button" id="modal-close-button" data-dismiss="modal" autofocus="true">Close</button>
           </div>
         </div>
       </div>

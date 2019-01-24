@@ -121,3 +121,15 @@ let showModal = function() {
 
 // show on page load
 showModal();
+
+/* ENABLE A SPECIFIC CAROUSEL SLIDE BASED ON URL */
+
+function goToSlide(number) {
+  setTimeout(() => {
+    $("#examples-carousel").carousel(number);
+  },200);
+}
+var url = window.location.href;
+var slide = url.substring(url.lastIndexOf('?')+1); // 4
+slide = parseInt(slide);
+goToSlide(slide);
