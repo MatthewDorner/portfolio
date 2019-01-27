@@ -53,7 +53,7 @@ carousel.on('slide.bs.carousel', function (e) {
       // then make (new) summary go back
       $(this).transition({
         marginLeft: (e.from > e.to) ? "-=3000" : "+=3000"
-      }, 700, function() {
+      }, 550, function() {
         // finished
       });
     });
@@ -63,11 +63,11 @@ carousel.on('slide.bs.carousel', function (e) {
   $('.technologies').each(function() {
     $(this).transition({
       marginTop: "+=2000"
-    },500, function() {
+    },550, function() {
       // then make (new) technologies go back up
       $(this).transition({
         marginTop: "-=2000"
-      }, 500, function() {
+      }, 550, function() {
         // finished
       });
     });
