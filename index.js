@@ -41,39 +41,40 @@ carousel.on('slide.bs.carousel', function (e) {
 
   // there's a bug with this where if you move the carousel and then move it again in the opposite direction before
   // the movement is complete, you can get stuck with some small amount of extra margin on the text, it's some problem
-  // with the code below.
+  // with the code below. maybe it can be fixed by just making the margins go back to zero instead of these "+- a certain number"
 
-  // maybe it can be fixed by just making the margins go back to zero instead of these "+- a certain number"
-
-  // move summary text horizontally
-  $('.summary').each(function() {
-    $(this).transition({
-      marginLeft: (e.from > e.to) ? "+=3000" : "-=3000"
-    }, 600, function() {
-      // then make (new) summary go back
+  // THE EXPLODING TEXT IS BROKEN ON CHROME AND CHROMIUM!!!!!! maybe this will help temporarily
+  if (navigator.userAgent.indexOf('Chrome') == -1 && navigator.userAgent.indexOf('Chromium') == -1) {
+    // move summary text horizontally
+    $('.summary').each(function() {
       $(this).transition({
-        marginLeft: (e.from > e.to) ? "-=3000" : "+=3000"
-      }, 550, function() {
-        // finished
+        marginLeft: (e.from > e.to) ? "+=3000" : "-=3000"
+      }, 600, function() {
+        // then make (new) summary go back
+        $(this).transition({
+          marginLeft: (e.from > e.to) ? "-=3000" : "+=3000"
+        }, 550, function() {
+          // finished
+        });
       });
     });
-  });
 
-  // move technologies down
-  $('.technologies').each(function() {
-    $(this).transition({
-      marginTop: "+=2000"
-    },550, function() {
-      // then make (new) technologies go back up
+    // move technologies down
+    $('.technologies').each(function() {
       $(this).transition({
-        marginTop: "-=2000"
-      }, 550, function() {
-        // finished
+        marginTop: "+=2000"
+      },550, function() {
+        // then make (new) technologies go back up
+        $(this).transition({
+          marginTop: "-=2000"
+        }, 550, function() {
+          // finished
+        });
       });
     });
-  });
+  }
 
-  /* FADING IMAGE AND TITLE */
+/* FADING IMAGE AND TITLE */
 
   // fade in incoming title and image
   // these won't work unless I do a timeout... otherwise the carousel slide animation doesn't work
@@ -106,7 +107,8 @@ carousel.on('slide.bs.carousel', function (e) {
       $(outgoingImage).css('opacity', '1');
     });
   }, 700);
-});
+
+}); // end of carousel.on slide
 
 function showModal() {
   $('#about-modal').modal();
