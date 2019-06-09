@@ -125,7 +125,7 @@ although there's probably a better way */
 }
 
 /* carousel item / work example contents */
-
+.example-video,
 .example-image {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -166,6 +166,7 @@ although there's probably a better way */
     width: 100%;
   }
 
+  .example-video,
   .example-image {
     width: 100%;
     height: auto;
@@ -188,6 +189,7 @@ although there's probably a better way */
     font-size: 18px;
     width: 100%;
   }
+  .example-video,
   .example-image {
     width: 560px;
     height: auto;
@@ -216,6 +218,7 @@ although there's probably a better way */
     font-size: 18px;
     width: 100%;
   }
+  .example-video,
   .example-image {
     width: 560px;
     height: auto;
