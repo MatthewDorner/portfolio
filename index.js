@@ -110,21 +110,24 @@ carousel.on('slide.bs.carousel', function (e) {
 
 }); // end of carousel.on slide
 
-function showModal() {
+function showAboutModal() {
   $('#about-modal').modal();
-  $('#modal-close-button').focus();
+  $('#about-modal-close-button').focus();
 }
 
+function showProjectsModal() {
+  $('#projects-modal').modal();
+  $('#projects-modal-close-button').focus();
+}
+
+// this function being used for two different purposes,... is the URL substring thing necessary?
+// this would also need to close the main nav... since if they're on mobile, the main navbar
+// will be expanded when they click on 'Projects'
 function goToSlide(number) {
+    $('#projects-modal').modal('hide');
     $("#examples-carousel").carousel(number);
 }
 
 $(document).ready(() => {
-  showModal();
-  var url = window.location.href;
-  if (url.lastIndexOf('?') != -1) {
-    var slide = url.substring(url.lastIndexOf('?')+1);
-    slide = parseInt(slide);
-    goToSlide(slide);
-  }
+  showAboutModal();
 });

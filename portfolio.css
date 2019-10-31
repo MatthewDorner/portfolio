@@ -16,7 +16,39 @@ although there's probably a better way */
   overflow-x: hidden;
 }
 
-/* modal */
+/* Projects modal */
+
+.modal-header-row {
+  margin-bottom: 10px;
+}
+
+.modal-table-header {
+  /* background: silver; */
+}
+
+.modal-name {
+  font-size: 17px;
+  margin-bottom: 3px;
+}
+
+.modal-type {
+  margin-top: 6px;
+  font-size: 17px;
+}
+
+/* .modal-hours {
+  font-style: italic;
+  margin-top: 7px;
+  font-size: 15px;
+} */
+
+.modal-technologies {
+  margin-top: 7px;
+  font-size: 15px;
+}
+
+
+/* About modal */
 
 .modal-content {
   font-size: 18px;
@@ -31,10 +63,10 @@ although there's probably a better way */
   padding-right: 4%;
 }
 
-.modal-content p.quote {
+/* .modal-content p.quote {
   font-style: italic;
   font-size: 14px;
-}
+} */
 
 .modal-body {
   padding-bottom: 1%;
