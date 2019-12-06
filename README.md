@@ -1,3 +1,3 @@
-# MatthewDorner
+# My Portfolio Site
 
-[My Portfolio Site](http://matthewdorner.github.io)
+Now located at [https://www.matthewdorner.com](https://www.matthewdorner.com).
