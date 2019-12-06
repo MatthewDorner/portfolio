@@ -43,36 +43,33 @@ carousel.on('slide.bs.carousel', function (e) {
   // the movement is complete, you can get stuck with some small amount of extra margin on the text, it's some problem
   // with the code below. maybe it can be fixed by just making the margins go back to zero instead of these "+- a certain number"
 
-  // THE EXPLODING TEXT IS BROKEN ON CHROME AND CHROMIUM!!!!!! maybe this will help temporarily
-  if (navigator.userAgent.indexOf('Chrome') == -1 && navigator.userAgent.indexOf('Chromium') == -1) {
-    // move summary text horizontally
-    $('.summary').each(function() {
+  // move summary text horizontally
+  $('.summary').each(function() {
+    $(this).transition({
+      marginLeft: (e.from > e.to) ? "+=3000" : "-=3000"
+    }, 600, function() {
+      // then make (new) summary go back
       $(this).transition({
-        marginLeft: (e.from > e.to) ? "+=3000" : "-=3000"
-      }, 600, function() {
-        // then make (new) summary go back
-        $(this).transition({
-          marginLeft: (e.from > e.to) ? "-=3000" : "+=3000"
-        }, 550, function() {
-          // finished
-        });
+        marginLeft: (e.from > e.to) ? "-=3000" : "+=3000"
+      }, 550, function() {
+        // finished
       });
     });
+  });
 
-    // move technologies down
-    $('.technologies').each(function() {
+  // move technologies down
+  $('.technologies').each(function() {
+    $(this).transition({
+      marginTop: "+=2000"
+    },550, function() {
+      // then make (new) technologies go back up
       $(this).transition({
-        marginTop: "+=2000"
-      },550, function() {
-        // then make (new) technologies go back up
-        $(this).transition({
-          marginTop: "-=2000"
-        }, 550, function() {
-          // finished
-        });
+        marginTop: "-=2000"
+      }, 550, function() {
+        // finished
       });
     });
-  }
+  });
 
 /* FADING IMAGE AND TITLE */
 

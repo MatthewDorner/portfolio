@@ -22,10 +22,6 @@ although there's probably a better way */
   margin-bottom: 10px;
 }
 
-.modal-table-header {
-  /* background: silver; */
-}
-
 .modal-name {
   font-size: 17px;
   margin-bottom: 3px;
@@ -35,12 +31,6 @@ although there's probably a better way */
   margin-top: 6px;
   font-size: 17px;
 }
-
-/* .modal-hours {
-  font-style: italic;
-  margin-top: 7px;
-  font-size: 15px;
-} */
 
 .modal-technologies {
   margin-top: 7px;
@@ -62,11 +52,6 @@ although there's probably a better way */
   padding-left: 4%;
   padding-right: 4%;
 }
-
-/* .modal-content p.quote {
-  font-style: italic;
-  font-size: 14px;
-} */
 
 .modal-body {
   padding-bottom: 1%;
@@ -118,12 +103,14 @@ although there's probably a better way */
 
 .carousel-control-prev,
 .carousel-control-next {
+  z-index: 2;
   color: black;
   bottom: 78%;
   filter: invert(50%);
 }
 
 .carousel-inner .carousel-item {
+  z-index: 1;
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform 1s ease;
