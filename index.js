@@ -105,16 +105,18 @@ carousel.on('slide.bs.carousel', function (e) {
     });
   }, 700);
 
-}); // end of carousel.on slide
+}); // end of carousel.on('slide.bs.carousel'...
+
+$("#about-modal").on('shown.bs.modal', function(){
+  $('#about-modal-close-button').focus();
+});
 
 function showAboutModal() {
   $('#about-modal').modal();
-  $('#about-modal-close-button').focus();
 }
 
 function showProjectsModal() {
   $('#projects-modal').modal();
-  $('#projects-modal-close-button').focus();
 }
 
 function goToSlide(number) {
