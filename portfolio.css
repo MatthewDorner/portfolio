@@ -190,7 +190,8 @@ although there's probably a better way */
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1439px) {
+/* 1024x768, 1280x1024, 1280x720, 1366x768, 1440x900 */
+@media only screen and (min-width: 768px) and (max-width: 1919px) {
   /* tablets and desktop */
 
   .carousel-inner {
@@ -213,7 +214,8 @@ although there's probably a better way */
   }
 }
 
-@media only screen and (min-width: 1440px) {
+/* 1920x1280 */
+@media only screen and (min-width: 1920px) {
   /* x-large screen desktops */
 
   .carousel-inner {
@@ -242,16 +244,15 @@ although there's probably a better way */
   }
 }
 
-/* to force vertical scroll on short screens (smaller than 1440x900), since overflow-y had to be turned off for .wrapper. 
-but... not if the window is very small horizontally, since that'll make the content itself scale down so it won't
-need to scroll. */
+/* because overflow-y was turned off for the wrapper to enable the exploding text effect, I have to manually turn on
+the vertical scrollbars in cases where they are needed. for low resolution PC screens under 1440x900 */
 @media only screen and (max-height: 899px) and (min-width: 576px) {
   .wrapper {
   	height: 140vh;
   }
 }
 
-/* and for landscape phones. TODO: use media queries correctly. */
+/* and for landscape phones */
 @media only screen and (max-height: 480px) {
   .wrapper {
     height: 250vh;

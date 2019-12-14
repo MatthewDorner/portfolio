@@ -117,11 +117,11 @@ function showProjectsModal() {
   $('#projects-modal-close-button').focus();
 }
 
-// this function being used for two different purposes,... is the URL substring thing necessary?
-// this would also need to close the main nav... since if they're on mobile, the main navbar
-// will be expanded when they click on 'Projects'
 function goToSlide(number) {
     $('#projects-modal').modal('hide');
+    if ($('.navbar-toggler').attr('aria-expanded') === "true") {
+      $('.navbar-toggler').click();
+    }
     $("#examples-carousel").carousel(number);
 }
 
