@@ -71,6 +71,10 @@ although there's probably a better way */
   margin-right: 5%;
 }
 
+.about-close-button {
+  margin-bottom: 6px;  
+}
+
 .btn:active,
 .btn:focus,
 .btn.active {
