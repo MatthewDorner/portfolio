@@ -159,6 +159,12 @@ although there's probably a better way */
   line-height: 1.5;
 }
 
+.carousel-item div p.testimonial {
+  font-size: 16.5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .summary {
   margin-top: 15px;
 }
@@ -186,6 +192,10 @@ although there's probably a better way */
   .carousel-item div p {
     font-size: 14px;
     width: 100%;
+  }
+
+  .carousel-item div p.testimonial {
+    font-size: 13px;
   }
 
   .example-image {
