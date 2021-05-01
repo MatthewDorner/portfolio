@@ -269,7 +269,7 @@ the vertical scrollbars in cases where they are needed. for low resolution PC sc
 /* and for landscape phones */
 @media only screen and (max-height: 480px) {
   .wrapper {
-    height: 250vh;
+    height: 260vh;
   }
 }
 

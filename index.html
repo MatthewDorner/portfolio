@@ -40,7 +40,7 @@
               <hr style="border-top: 2px solid silver;"/>
               <div class="row">
                 <div class="col-lg-4 modal-name">
-                  <button type="button" class="btn btn-default modal-button" data-dismiss="modal" autofocus="true" onclick="goToSlide(0)" style="width:100%;">React Native Songbook</button>
+                  <button type="button" class="btn btn-default modal-button" data-dismiss="modal" autofocus="true" onclick="goToSlide(0)" style="width:100%;">ABC Songbook</button>
                 </div>
                 <div class="col-lg-2 modal-type">
                   Personal
@@ -189,22 +189,23 @@
       <div class="carousel-inner anim">
         <div class="carousel-item active">
           <div class="item-background"></div>
-          <h2 class="example-title">Personal Project - React Native Songbook</h2>
-          <video class="example-image" width="100%" height="100%" controls>
-            <source src="./songbook-v111.webm" type="video/webm">
+          <h2 class="example-title">Personal Project - ABC Songbook</h2>
+          <video class="example-image" width="100%" height="100%" poster="./songbook.png" controls>
+            <source src="./songbook.mp4" type="video/webm">
           </video>
           <div class="carousel-item-text">
-            <p class="summary">This mobile app allows the user to import <a href="https://en.wikipedia.org/wiki/ABC_notation">ABC notation</a> music data and view it in the form of sheet music and guitar tab. It uses a local SQLite database which is pre-loaded with songs from <a href="https://github.com/jukedeck/nottingham-dataset">Nottingham Dataset</a>, a collection of free, open-source ABC music. It makes use of my <a href="#" onclick="goToSlide(1)">abcjs-vexflow-renderer</a> library to process and format the music.</a></p>
+            <p class="summary">This mobile app allows the user to import <a href="https://en.wikipedia.org/wiki/ABC_notation">ABC notation</a> music data and view it in the form of sheet music and tablature for a variety of instruments. It uses a local SQLite database which is pre-loaded with songs from <a href="https://github.com/jukedeck/nottingham-dataset">Nottingham Dataset</a>, a collection of free, open-source ABC music. It makes use of my <a href="#" onclick="goToSlide(1)">abcjs-vexflow-renderer</a> library to process and format the music.</a></p>
             <p class="technologies">
-              Hours Spent: 200
+              Hours Spent: 300
               <br>
-              Technologies: JavaScript, React Native, Android, SQLite, React Native Navigation
+              Technologies: JavaScript, React Native, Redux, React Hooks, Android, SQLite, React Native Navigation
               <br>
               Links:
               <a href="https://play.google.com/store/apps/details?id=com.reactnativesongbook">Google Play Store</a> |
               <a href="https://github.com/matthewdorner/react-native-songbook">GitHub repo</a> |
               <a href="https://github.com/MatthewDorner/react-native-songbook/tree/master/src/components">Components</a> |
-              <a href="https://github.com/MatthewDorner/react-native-songbook/tree/master/src/data-access">Database</a>
+              <a href="https://github.com/MatthewDorner/react-native-songbook/tree/master/src/data-access">Database</a> |
+              <a href="https://github.com/MatthewDorner/react-native-songbook/tree/master/src/redux">Redux</a>
             </p>
           </div>
         </div>
@@ -213,9 +214,9 @@
           <h2 class="example-title">Personal Project - Abcjs VexFlow Renderer</h2>
           <img class="example-image" src="./abcjs-vexflow-renderer-screenshot.png" alt="abcjs-vexflow-renderer screenshot"/>
           <div class="carousel-item-text">
-            <p class="summary">I started writing this code as part of my <a href="#" onclick="goToSlide(0)">react-native-songbook</a> project, then decided to break it into a separate library. This library takes the parser output of the <a href="https://github.com/paulrosen/abcjs">abcjs</a> library (for music formatted in <a href="https://en.wikipedia.org/wiki/ABC_notation">ABC notation</a>) and renders it to SVG using the <a href="https://github.com/0xfe/vexflow">VexFlow</a> music engraving library. Writing this code myself allowed me to include specific features I wanted for my app, such as automatically-generated guitar tabs for each song. The repository includes a browser-based tool to view the output of the library and a unit test suite via Jest.</p>
+            <p class="summary">I started writing this code as part of my <a href="#" onclick="goToSlide(0)">react-native-songbook</a> project, then decided to break it into a separate library. This library takes the parser output of the <a href="https://github.com/paulrosen/abcjs">abcjs</a> library (for music formatted in <a href="https://en.wikipedia.org/wiki/ABC_notation">ABC notation</a>) and renders it to SVG using the <a href="https://github.com/0xfe/vexflow">VexFlow</a> music engraving library. Writing this code myself allowed me to include specific features I wanted for my app, such as the ability to generate tablature for fretted instruments, violin fingerings, harmonica and tin whistle. The repository includes a browser-based tool to view the output of the library and a unit test suite via Jest.</p>
             <p class="technologies">
-              Hours Spent: 150
+              Hours Spent: 250
               <br>
               Technologies: JavaScript, abcjs, VexFlow, Jest, ESLint, Webpack, NPM
               <br>
@@ -227,8 +228,7 @@
               <a href="https://github.com/MatthewDorner/abcjs-vexflow-renderer/blob/master/lib/main/fill-empty-space.js">2</a> |
               <a href="https://github.com/MatthewDorner/abcjs-vexflow-renderer/blob/master/lib/main/generate-vex-objects.js">Main algorithm</a> |
               <a href="https://github.com/MatthewDorner/abcjs-vexflow-renderer/blob/master/lib/main/parse-tune-structure.js">Parser</a> |
-              <a href="https://github.com/MatthewDorner/abcjs-vexflow-renderer/blob/master/lib/vex-utils/generate-beams-compound.js">Beam music notes</a> |
-              <a href="https://github.com/MatthewDorner/abcjs-vexflow-renderer/blob/master/lib/vex-utils/vex-utils.js">Utilities</a> |
+              <a href="https://github.com/MatthewDorner/abcjs-vexflow-renderer/blob/master/lib/utils/generate-beams-compound.js">Beam music notes</a> |
               <a href="https://github.com/MatthewDorner/abcjs-vexflow-renderer/blob/master/lib/main/draw-to-context.js">Draw music</a>
             </p>
           </div>
@@ -254,10 +254,11 @@
             <p class="technologies">
               Hours Spent: 150
               <br>
-              Technologies: JavaScript, Golang, React, Redux, chess.js, chessboard.js, CSS
+              Technologies: JavaScript, Golang, React, Redux, MS Azure, chess.js, chessboard.js
               <br>
               Links:
               <a href="https://github.com/MatthewDorner/mattermost-plugin-chess">Chess plugin GitHub repo</a> |
+              <a href="https://github.com/mattermost/mattermost-plugin-mscalendar/pull/188">Golang Feature PR</a> |
               <a href="https://github.com/mattermost/mattermost-plugin-mscalendar/pull/40">Golang PR</a> |
               <a href="https://github.com/mattermost/mattermost-plugin-mscalendar/pull/42">Golang PR</a> |
               <a href="https://github.com/mattermost/mattermost-plugin-mscalendar/issues/37">Golang bug report</a> |
@@ -289,7 +290,7 @@
           <h2 class="example-title">Open Source Contribution - HospitalRun</h2>
           <img class="example-image" src="./hospitalrun.png" alt="HospitalRun screenshot"/>
           <div class="carousel-item-text">
-            <p class="summary">HospitalRun is a web application for hospital management written in JavaScript. It originally used Ember, but is now being rewritten in React with Redux and TypeScript. I was a maintainer for the project in 2018 and continue to be involved as a contributor.</p>
+            <p class="summary">HospitalRun is a web application for hospital management written in JavaScript with an offline-first design. It originally used Ember, but is now being rewritten in React with Redux and TypeScript. I made contributions to both stages of the project.</p>
             <p class="technologies">
               Hours Spent: 400
               <br>
