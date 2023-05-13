@@ -182,7 +182,7 @@ although there's probably a better way */
   /* phones */
 
   .wrapper {
-    height: 800px;
+    height: 1000px;
   }
 
   .carousel-item h2 {
@@ -262,7 +262,7 @@ although there's probably a better way */
 the vertical scrollbars in cases where they are needed. for low resolution PC screens under 1440x900 */
 @media only screen and (max-height: 899px) and (min-width: 576px) {
   .wrapper {
-  	height: 140vh;
+  	height: 160vh;
   }
 }
 
